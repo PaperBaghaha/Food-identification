@@ -2,7 +2,6 @@ import tensorflow as tf
 from tensorflow.keras.preprocessing import image
 import numpy as np
 
-# Load the saved model
 model = tf.keras.models.load_model('food_classifier.keras')
 print("Model loaded successfully!")
 
@@ -18,6 +17,6 @@ def predict_image(image_path):
     return predicted_class
 
 if __name__ == "__main__":
-    test_image_path = "images/test_image.jpg"  # cleaner
+    test_image_path = "images/test_image.jpg" 
     result = predict_image(test_image_path)
     print(f"Predicted class: {result}")
